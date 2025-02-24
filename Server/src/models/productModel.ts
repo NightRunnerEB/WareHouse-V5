@@ -22,7 +22,6 @@ export async function getProductById(id: number) {
   return result.rows[0];
 }
 
-// Создать товар
 export async function createProduct(product: Product) {
   const { name, description, category, quantity, price } = product;
   const result = await pool.query(
